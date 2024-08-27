@@ -129,7 +129,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>React Query - TanStack Query</h1>
+      <h1 style={{textAlign: 'center'}}>React Query - TanStack Query</h1>
       <h3>Total Todos : {data?.length || 0} </h3>
       <form onSubmit={handleAddSubmit}>
         <input
