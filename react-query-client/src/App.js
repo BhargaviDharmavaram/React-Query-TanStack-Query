@@ -140,6 +140,7 @@ function App() {
         />
         <button type="submit">Add Todo</button>
       </form>
+      <h2>Todos List</h2>
       <table border={1}>
       <thead>
         <tr>
