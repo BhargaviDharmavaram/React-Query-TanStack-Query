@@ -140,14 +140,27 @@ function App() {
         />
         <button type="submit">Add Todo</button>
       </form>
-      {data?.map((todo) => (
-        <div key={todo.id}>
-          <h4>ID: {todo.id}</h4>
-          <h4>Title: {todo.title}</h4>
-          <button onClick={() => handleEdit(todo)}>Edit</button>
-          <button onClick={() => handleRemove(todo.id)}>Delete</button>
-        </div>
-      ))}
+      <table border={1}>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Title</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {data?.map((todo) => (
+          <tr key={todo.id}>
+            <td>{todo.id}</td>
+            <td>{todo.title}</td>
+            <td>
+              <button onClick={() => handleEdit(todo)}>Edit</button>
+              <button onClick={() => handleRemove(todo.id)}>Delete</button>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
     </div>
   );
 }
