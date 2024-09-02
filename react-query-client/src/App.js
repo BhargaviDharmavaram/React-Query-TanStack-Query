@@ -19,7 +19,7 @@ const fetchTodos = async () => {
   const { data } = await axios.get("http://localhost:5000/api/getTodos");
   return data;
 };
-
+// function to add the todo
 const addTodo = async (newTodo) => {
   const { data } = await axios.post('http://localhost:5000/api/addTodo', newTodo, {
     headers: { 'Content-type': 'application/json' }
